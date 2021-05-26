@@ -8,13 +8,13 @@ Implements the graphics.py library.
 - [x] Create frog and cars with images
 - [x] Move frog with WASD keys
 - [x] Car movement
-- [] Make sure cars loop on window, creating traffic
-- [-] Car and frog collision causes life loss and frog moves to square one
-- ** *Must work on*: Collision works but reset doesn't work properly
+- [] Make sure cars loop on window, creating traffic </br>
+- [] Car and frog collision causes life loss and frog moves to square one
+- *Must work on*: Collision works but reset doesn't work properly
 - [] Loss of 3 lives is GAME OVER
 - [] Show GAME OVER text
 - [] Getting home means player wins
-- ** *Must work on*: Doesn't show text output
+- *Must work on*: Doesn't show text output
 
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
