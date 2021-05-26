@@ -6,7 +6,7 @@ class Frog:
         self.x = x
         self.y = y
         self.win = win
-        self.frog = Image(Point(self.x, self.y), "froggy.png")  # sets image of frog
+        self.frog = Image(Point(self.x, self.y), "/img/froggy.png")  # sets image of frog
         self.lives = 3  # starting with 3 lives
 
     def create(self, win):  # create frog
@@ -86,10 +86,10 @@ def main():
     win.setCoords(0, 0, 13, 13)
 
     #   CARS
-    myCars = [Car(6.5, 7, "car.png", -2, win),
-              Car(3.5, 9, "racing.png", 3, win),
-              Car(10.5, 7, "car.png", -2, win),
-              Car(8.5, 9, "racing.png", 3, win)]
+    myCars = [Car(6.5, 7, "/img/car.png", -2, win),
+              Car(3.5, 9, "/img/racing.png", 3, win),
+              Car(10.5, 7, "/img/car.png", -2, win),
+              Car(8.5, 9, "/img/racing.png", 3, win)]
 
     gameOver = False
     x_frog = 6.5
