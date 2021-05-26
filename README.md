@@ -8,7 +8,7 @@ Implements the graphics.py library.
 - [x] Create frog and cars with images
 - [x] Move frog with WASD keys
 - [x] Car movement
-- [] Make sure cars loop on window, creating traffic </br>
+[] Make sure cars loop on window, creating traffic </br>
 - [] Car and frog collision causes life loss and frog moves to square one
 - *Must work on*: Collision works but reset doesn't work properly
 - [] Loss of 3 lives is GAME OVER
