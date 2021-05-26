@@ -5,16 +5,16 @@ This is my simple version of classic game FROGGER. The goal is to get the frog h
 Implements the graphics.py library.
 
 **MAIN GOALS:**
-[x] Create frog and cars with images
-[x] Move frog with WASD keys
-[x] Car movement
-[] Make sure cars loop on window, creating traffic
-[-] Car and frog collision causes life loss and frog moves to square one
-** *Must work on*: Collision works but reset doesn't work properly
-[] Loss of 3 lives is GAME OVER
-[] Show GAME OVER text
-[] Getting home means player wins
-** *Must work on*: Doesn't show text output
+- [x] Create frog and cars with images
+- [x] Move frog with WASD keys
+- [x] Car movement
+- [] Make sure cars loop on window, creating traffic
+- [-] Car and frog collision causes life loss and frog moves to square one
+- ** *Must work on*: Collision works but reset doesn't work properly
+- [] Loss of 3 lives is GAME OVER
+- [] Show GAME OVER text
+- [] Getting home means player wins
+- ** *Must work on*: Doesn't show text output
 
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
