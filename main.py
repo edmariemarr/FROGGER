@@ -1,5 +1,4 @@
 from graphics import *
-import math
 
 class Frog:
     def __init__(self, x, y, win):
@@ -13,28 +12,38 @@ class Frog:
         self.frog.draw(win)
         win.update()
 
-    def undraw(self):   # undraw frog
+    def undraw(self):  # undraw frog
         self.frog.undraw()
 
-    def getWidth(self):     # gets width of frog
+    def getWidth(self):  # gets width of frog
         return self.frog.getWidth()
 
-    def getHeight(self):    # gets height of frog
+    def getHeight(self):  # gets height of frog
         return self.frog.getHeight()
 
-    def getX(self):     # receives x value
+    def getX(self):  # receives x value
         return self.x
 
-    def getY(self):     # receives y value
+    def getY(self):  # receives y value
         return self.y
 
-    def leftBound(self):    # calculates left bound
+    def leftBound(self):  # calculates left bound
         left = (self.frog.getAnchor().getX() - self.frog.getWidth() / 2)
         return int(left)
 
-    def rightBound(self):   # calculates right bound
+    def rightBound(self):  # calculates right bound
         right = (self.frog.getAnchor().getX() + self.frog.getWidth() / 2)
         return int(right)
+
+    def collision(self, other):     # if frog and car collide
+        if self.x < other.x + other.getWidth() and self.x + self.getWidth() > other.x and \
+                self.y < other.y + other.getHeight() and self.y + self.getHeight() > other.y:
+            return True
+        return False
+
+    def reset(self):    # if collision happens, bring frog back to square one
+        self.undraw()
+        self.frog = Image(Point(6.5, 2.5), "froggy.png")
 
 class Car:
     def __init__(self, x, y, image, speed, win):
@@ -44,7 +53,7 @@ class Car:
         self.car = Image(Point(self.x, self.y), image)  # sets image of car
         self.car.draw(win)
 
-    def movecars(self):     # moves cars
+    def movecars(self):  # moves cars
         self.x += self.speed
         self.car.move(self.speed, 0)
         if self.speed < -400:
@@ -52,23 +61,23 @@ class Car:
         if self.speed > 400:
             self.speed = -400
 
-    def getWidth(self):     # gets width of car
+    def getWidth(self):  # gets width of car
         return self.car.getWidth()
 
-    def getHeight(self):    # gets height of car
+    def getHeight(self):  # gets height of car
         return self.car.getHeight()
 
-    def getX(self):     # receives x value
+    def getX(self):  # receives x value
         return self.x
 
-    def getY(self):     # receives y value
+    def getY(self):  # receives y value
         return self.y
 
-    def leftBound(self):    # calculates left bound
+    def leftBound(self):  # calculates left bound
         left = self.car.getAnchor().getX() - self.car.getWidth() / 2
         return int(left)
 
-    def rightBound(self):   # calculates right bound
+    def rightBound(self):  # calculates right bound
         right = self.car.getAnchor().getX() + self.car.getWidth() / 2
         return int(right)
 
@@ -81,15 +90,17 @@ class Car:
 def main():
     WIDTH = 600
     HEIGHT = 600
-    win = GraphWin("FROGGER", WIDTH, HEIGHT)    # sets window
+    win = GraphWin("FROGGER", WIDTH, HEIGHT)  # sets window
     win.setBackground("black")
     win.setCoords(0, 0, 13, 13)
 
     #   CARS
     myCars = [Car(6.5, 7, "/img/car.png", -2, win),
-              Car(3.5, 9, "/img/racing.png", 3, win),
               Car(10.5, 7, "/img/car.png", -2, win),
-              Car(8.5, 9, "/img/racing.png", 3, win)]
+              Car(3.5, 9, "/img/racing.png", 3, win),
+              Car(8.5, 9, "/img/racing.png", 3, win),
+              Car(2.5, 5, "/img/racing.png", 3, win),
+              Car(12.5, 5, "/img/racing.png", 3, win)]
 
     gameOver = False
     x_frog = 6.5
@@ -101,7 +112,7 @@ def main():
 
     while not gameOver:
         key = win.checkKey()
-        if key:     # FROG MOVEMENT WITH WASD KEYS
+        if key:  # FROG MOVEMENT WITH WASD KEYS
             froggerPlayer.undraw()
             if key == 'w':
                 y_frog += 1.9
@@ -126,9 +137,9 @@ def main():
 
         #   CALCULATE COLLISION
         #   NEED TO WORK ON COLLISION BRINGING THE FROG TO SQUARE ONE
-        if (math.fabs(froggerPlayer.getX() - cars.getX()) * 2) < (froggerPlayer.getWidth() + cars.getWidth()) and (
-                (math.fabs(froggerPlayer.getY() - cars.getY()) * 2) < (froggerPlayer.getHeight() + cars.getHeight())):
-            froggerPlayer.lives -= 1
+        if froggerPlayer.collision(cars):
+            froggerPlayer.reset()
+            froggerPlayer.create(win)
 
         #   GAME OVER IF FROG LIVES REACH 0
         if froggerPlayer.lives == 0:
@@ -140,7 +151,8 @@ def main():
             time.sleep(5)
             gameOver = True
 
-    if gameOver:    # CLOSE GAME
+    if gameOver:  # CLOSE GAME
         win.close()
+
 
 main()
