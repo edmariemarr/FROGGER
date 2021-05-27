@@ -13,6 +13,7 @@ Implements the graphics.py library.
 *Must work on*: Collision works but reset doesn't work properly </br>
 [] Loss of 3 lives is GAME OVER </br>
 [] Show GAME OVER text </br>
+[] Add lilypads to serve as frog's home </br>
 [] Getting home means player wins </br>
 *Must work on*: Doesn't show text output </br>
 
