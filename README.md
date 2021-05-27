@@ -25,3 +25,5 @@ Some resources:
 - Car movement: https://stackoverflow.com/questions/44744656/draw-and-move-multiple-image-object-at-once-in-python
 - Collision: https://github.com/wynand1004/Projects/blob/master/Frogger/frogger.py
 </br>
+
+![FROGGER_game_screen](https://github.com/edmariemarr/FROGGER/blob/main/img/FROGGER_game_screen.PNG?raw=true)
