@@ -16,6 +16,8 @@ Implements the graphics.py library.
 - [x] Add lilypads to serve as frog's home </br>
 - [x] Getting home means player wins </br>
 
+Current errors present: Collision happens preemptively so winning or losing text appears at beginning and loss of lives occurs, movement difficulty, no traffic.
+
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
 - Keyboard input: https://stackoverflow.com/questions/61855823/using-graphics-py-and-the-keyboard-how-can-i-make-a-character-move-based-upon-k
