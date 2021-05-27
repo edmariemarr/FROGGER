@@ -21,3 +21,4 @@ Some resources:
 - Keyboard input: https://stackoverflow.com/questions/61855823/using-graphics-py-and-the-keyboard-how-can-i-make-a-character-move-based-upon-k
 - Keyboard input: https://stackoverflow.com/questions/41156910/python-graphics-win-getkey-function
 - Car movement: https://stackoverflow.com/questions/44744656/draw-and-move-multiple-image-object-at-once-in-python
+- Collision: https://stackoverflow.com/questions/65509687/how-to-check-for-collision-between-two-boxes-in-graphics-py
