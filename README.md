@@ -26,4 +26,4 @@ Some resources:
 - Car movement: https://stackoverflow.com/questions/44744656/draw-and-move-multiple-image-object-at-once-in-python
 - Collision: https://stackoverflow.com/questions/65509687/how-to-check-for-collision-between-two-boxes-in-graphics-py
 </br>
-![WHAT THE GAME LOOKS LIKE](https://github.com/edmariemarr/FROGGER/blob/7dba28a3ad67a3946b4c894a1c884924585f2981/img/FROGGER_game_screen.PNG?raw=true)
+![WHAT THE GAME LOOKS LIKE](https://github.com/edmariemarr/FROGGER/blob/7dba28a3ad67a3946b4c894a1c884924585f2981/img/FROGGER_game_screen.PNG)
