@@ -16,7 +16,7 @@ Implements the graphics.py library.
 - [x] Add lilypads to serve as frog's home </br>
 - [x] Getting home means player wins </br>
 
-Current errors present: Collision happens preemptively so winning or losing text appears at beginning and loss of lives occurs, movement difficulty, no traffic.
+Current errors present: Collision happens preemptively so winning or losing text appears at beginning and loss of lives occurs, movement difficulty, reset to square one doesn't delete past character's steps, no traffic.
 
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
