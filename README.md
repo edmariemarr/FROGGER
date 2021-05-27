@@ -15,7 +15,7 @@ Implements the graphics.py library.
 [] Show GAME OVER text </br>
 [x] Add lilypads to serve as frog's home </br>
 [] Getting home means player wins </br>
-*Must work on*: Doesn't show text output </br>
+*Must work on*: Shows winning text output at the beginning of game </br>
 
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
