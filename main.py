@@ -43,7 +43,7 @@ class Frog:
 
     def reset(self):    # if collision happens, bring frog back to square one
         self.undraw()
-        self.frog = Image(Point(6.5, 2.5), "froggy.png")
+        self.frog = Image(Point(6.5, 2.5), "/img/froggy.png")
 
 class Car:
     def __init__(self, x, y, image, speed, win):
