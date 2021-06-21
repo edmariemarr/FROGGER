@@ -2,23 +2,11 @@
 Adv. Programming Final Project
 
 This is my simple version of classic game FROGGER. The goal is to get the frog home through a few obstacles.
-Implements the graphics.py library.
+Implements the graphics.py library, as a requirement.
 
-**MAIN GOALS:**
-- [x] Create frog and cars with images
-- [x] Move frog with WASD keys
-- [x] Car movement </br>
-[] Make sure cars loop on window, creating traffic </br>
-- [x] Car and frog collision causes life loss and frog moves to square one </br>
-- [x] Create images for the frog's 3 lives
-- [x] Loss of 3 lives is GAME OVER </br>
-- [x] Show GAME OVER text </br>
-- [x] Add lilypads to serve as frog's home </br>
-- [x] Getting home means player wins </br>
+IMPORTANT NOTE: It is not yet finished.
 
 Current errors present: Collision happens preemptively so winning or losing text appears at beginning and loss of lives occurs, movement difficulty, reset to square one doesn't delete past character's steps, no traffic.
-
-Will continue to update as I find solutions for the errors.
 
 Some resources:
 - For images: http://www.classicgaming.cc/classics/frogger/icons
